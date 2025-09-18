@@ -21,7 +21,7 @@ const { wallets } = getDefaultWallets();
 
 export const config = getDefaultConfig({
     appName: "ENS dapp",
-    projectId: "YOUR_PROJECT_ID",
+    projectId: "3ea12a53827ac0cace0de30adf91e1ed",
     wallets: [
         ...wallets,
         {
