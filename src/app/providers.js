@@ -2,12 +2,16 @@
 
 import * as React from "react";
 import {
-    RainbowKitProvider,
-    getDefaultWallets,
-    getDefaultConfig,
-    darkTheme,
-    trustWallet,
-    ledgerWallet,
+  RainbowKitProvider,
+  getDefaultWallets,
+  getDefaultConfig,
+  darkTheme,
+} from "@rainbow-me/rainbowkit";
+
+import {
+  argentWallet,
+  trustWallet,
+  ledgerWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 
 //importing the chains we need
@@ -41,7 +45,7 @@ export function Providers({ children }) {
     return (
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>
-                <RainbowKitProvider theme={darkTheme}>{children}</RainbowKitProvider>
+                <RainbowKitProvider theme={darkTheme()}>{children}</RainbowKitProvider>
             </QueryClientProvider>
         </WagmiProvider>
     )
